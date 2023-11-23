@@ -1,3 +1,163 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
-  background-color: antiquewhite;
+  background: radial-gradient(#FDB927, #552583);
+  background-size: cover;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerProfile-wrapper{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px; 
+  grid-auto-flow: row;
+  padding: 75px 50px;
+}
+
+.playerImage{
+  width: 260px;
+  height: 302px;
+}
+
+.playerCard{
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px 15px;
+  border-radius: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.deleteButton,
+.editButton{
+    background-color: #fff000;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.deleteButton:not(:disabled):hover,
+.deleteButton:not(:disabled):focus,
+.editButton:not(:disabled):hover,
+.editButton:not(:disabled):focus{
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.deleteButton:disabled,
+.editButton:disabled{
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+
+
+
+//Forma
+
+.playerInfoForm{
+display: flex;
+flex-direction: column;
+gap: 25px;
+max-width: 250px;
+border: 1px solid black;
+padding: 25px 15px;
+border-radius: 10px;
+background-color: #666666;
+}
+
+.playerName-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.playerName{
+  padding: 10px 2.5px;
+  border-radius: 5px;
+}
+
+.playerDoB-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.playerDoB{
+  padding: 10px 2.5px;
+  border-radius: 5px;
+}
+
+.playerPosition-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.playerPosition{
+  padding: 10px 2.5px;
+  border-radius: 5px;
+}
+
+.playerNumber-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.playerNumber{
+  padding: 10px 2.5px;
+  border-radius: 5px;
+}
+
+.addButton-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.addButton{
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.addButton:not(:disabled):hover,
+.addButton:not(:disabled):focus {
+outline: 0;
+background: #f4e603;
+box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.addButton:disabled {
+filter: saturate(0.2) opacity(0.5);
+-webkit-filter: saturate(0.2) opacity(0.5);
+cursor: not-allowed;
 }

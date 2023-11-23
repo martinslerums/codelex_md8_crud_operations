@@ -7,18 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles.css">
-    <title>Document</title>
+    <title>Lakers Roster</title>
 </head>
 <body>
 
-<div class="js-fruit-wrapper">
+<div class="playerProfile-wrapper js-playerProfile-wrapper"></div>
 
-
-</div>
-
-<form class="js-fruit-form">
-    <input type="text" name="fruit" placeholder="Add Fruit" required>
-    <button>Add Fruit</button>
+<form class="playerInfoForm js-player-profile">
+    <div class="playerName-wrapper">
+        <label for="name">Player Name</label>
+        <input type="text" id="name" class="playerName js-playerName" placeholder="Add player name" required>
+    </div>
+    <div class="playerDoB-wrapper">
+        <div><label for="dob">Date of birth</label></div>
+        <input type="date" id="dob" class="playerDoB js-playerDoB" placeholder="Date" required>
+   </div>
+   <div class="playerPosition-wrapper">
+        <div><label for="playerPosition">Choose players position</label></div>
+        <select id="playerPosition" class="playerPosition js-playerPosition" required>
+            <option value="point_guard">Point guard</option>
+            <option value="shooting_guard">Shooting guard</option>
+            <option value="small_forward">Small forward</option>
+            <option value="power_forward">Power forward</option>
+            <option value="center">Center</option>
+        </select>
+   </div>
+   <div class="playerNumber-wrapper">
+        <div><label for="playerNumber">Players jersey #</label></div>
+        <select id="playerNumber" class="playerNumber js-playerNumber" required>
+        </select>
+   </div>
+    <div class="addButton-wrapper">
+        <button class="addButton">Add Player</button>
+    </div>
 </form>
 
     <script src="/scripts.js"></script>
